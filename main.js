@@ -101,19 +101,21 @@ function stopGame() {
 
 
 let players = [];
+loadPlayers();
 
 function setPlayer(event) {
   event.PreventDefault();
   let form = event.target
-  let playername = form.playerName.value
 
-  let currentPlayer = players.find(player => player.name == playername)
+  let playerName = form.playerName.value
+
+  let currentPlayer = players.find(player => player.name == playerName)
 
 
 
   if (!currentPlayer) {
 
-    currentPlayer = { name: playername, topScore: 0 };
+    currentPlayer = { name: playerName, topScore: 0 };
     players.push(currentPlayer);
     savePlayers();
 
