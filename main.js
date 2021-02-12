@@ -100,11 +100,11 @@ function stopGame() {
 //#endregion
 
 
-let players = [];
-loadPlayers();
+let players = []
+loadPlayers()
 
 function setPlayer(event) {
-  event.preventDefault();
+  event.preventDefault()
   let form = event.target
 
   let playerName = form.playerName.value
@@ -122,7 +122,7 @@ function setPlayer(event) {
   }
 
 
-
+  console.log("sdfsdfs")
   console.log(currentPlayer)
   form.reset();
 }
