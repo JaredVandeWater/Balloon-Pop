@@ -21,7 +21,7 @@ let highestPopCount = 0
 let gameLength = 5000
 let clockID = 0
 let timeleft = 0
-
+let currentPlayer = {}
 
 
 
@@ -87,8 +87,9 @@ function stopGame() {
   width = 100;
 
 
-  if (currentPopCount > highestPopCount) {
-    highestPopCount = currentPopCount;
+  if (currentPopCount > currentPlayer.topScore) {
+    currentPlayer.topScore = currentPopCount;
+    savePlayers()
   }
   currentPopCount = 0;
 
@@ -109,7 +110,7 @@ function setPlayer(event) {
 
   let playerName = form.playerName.value
 
-  let currentPlayer = players.find(player => player.name == playerName)
+  currentPlayer = players.find(player => player.name == playerName)
 
 
 
@@ -121,9 +122,6 @@ function setPlayer(event) {
 
   }
 
-
-  console.log("sdfsdfs")
-  console.log(currentPlayer)
   form.reset();
 }
 
