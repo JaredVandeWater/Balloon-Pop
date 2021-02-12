@@ -25,32 +25,33 @@
     </form>
 
 
-
-    <div>
-        <button onclick="startGame()" id="start-button">START GAME</button>
-    </div>
-
-
-    <button onclick="inflate()" id="inflate-button" disabled=true>Inflate <span id="click-count"></span></button>
+    <section class="game hidden">
+        <div>
+            <button onclick="startGame()" id="start-button">START GAME</button>
+        </div>
 
 
+        <button onclick="inflate()" id="inflate-button" disabled=true>Inflate <span id="click-count"></span></button>
 
-    <div>
-        <span>Balloons Popped: </span>
-        <span id="pop-count">0</span>
-    </div>
 
-    <div>
-        <span>High Score: </span>
-        <span id="highscore">0</span>
-    </div>
 
-    <div>
-        <span>Time Remaining: </span>
-        <span id="countdown">0</span>
-    </div>
-    <div id="balloon" class="balloon"></div>
+        <div>
+            <span>Balloons Popped: </span>
+            <span id="pop-count">0</span>
+        </div>
 
+        <div>
+            <span>High Score: </span>
+            <span id="highscore">0</span>
+        </div>
+
+        <div>
+            <span>Time Remaining: </span>
+            <span id="countdown">0</span>
+        </div>
+        <div id="balloon" class="balloon"></div>
+
+    </section>
 
     <script src="main.js"></script>
 </body>
