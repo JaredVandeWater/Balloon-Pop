@@ -115,14 +115,12 @@ function setPlayer(event) {
 
 
   if (!currentPlayer) {
-
-    currentPlayer = { name: playerName, topScore: 0 };
-    players.push(currentPlayer);
-    savePlayers();
-
+    currentPlayer = { name: playerName, topScore: 0 }
+    players.push(currentPlayer)
+    savePlayers()
   }
 
-  form.reset();
+  form.reset()
   document.getElementById("game").classList.remove("hidden")
   form.classList.add("hidden")
   draw()
@@ -133,11 +131,9 @@ function savePlayers() {
   window.localStorage.setItem("players", JSON.stringify(players));
 
 }
-
-
 function loadPlayers() {
-  let playersData = JSON.parse(window.localStorage.getItem("players"));
+  let playersData = JSON.parse(window.localStorage.getItem("players"))
   if (playersData) {
-    players = playersData;
+    players = playersData
   }
 }
