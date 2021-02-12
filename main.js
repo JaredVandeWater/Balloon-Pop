@@ -104,7 +104,7 @@ let players = [];
 loadPlayers();
 
 function setPlayer(event) {
-  event.PreventDefault();
+  event.preventDefault();
   let form = event.target
 
   let playerName = form.playerName.value
