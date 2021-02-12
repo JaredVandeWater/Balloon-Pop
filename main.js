@@ -120,6 +120,9 @@ function setPlayer(event) {
     savePlayers();
 
   }
+
+
+
   console.log(currentPlayer)
   form.reset();
 }
