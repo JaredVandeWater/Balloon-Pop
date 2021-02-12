@@ -74,7 +74,7 @@ function draw() {
   balloon.style.width = width + "px";
   buttonclickcount.innerText = clickCount.toString();
   popCountelem.innerText = currentPopCount.toString();
-  highscoreelem.innerText = highestPopCount.toString();
+  highscoreelem.innerText = currentPlayer.topScore.toString();
 }
 
 
@@ -123,6 +123,7 @@ function setPlayer(event) {
   }
 
   form.reset();
+  draw()
 }
 
 
